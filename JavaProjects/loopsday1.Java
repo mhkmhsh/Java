@@ -3,6 +3,7 @@ public class loopsday1 {
         print200to300();
         printEvansto1000();
         sum1to10();
+        sumMultiplesof7();
     }
   public static void print200to300(){
        int x = 200;
@@ -26,7 +27,15 @@ public static void sum1to10(){
         add++;
     }
     }
+    public static void sumMultiplesof7(){
+    int sum = 0;
+    int x= 7;
+    while( x<=700){
+        sum = sum + x;
+        x += 7;
+    }
+    System.out.println(sum);
+    }
 }
 
 
-}
