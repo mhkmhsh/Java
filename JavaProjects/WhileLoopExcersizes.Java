@@ -89,18 +89,24 @@ public class WhileLoopExercises {
 		// This method asks the user for a starting integer value and ending integer value, 
 		// and then calculates and prints the sum and average of all the integers between 
 		// the starting and ending value (inclusive).
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the starting integer: ");
+		int y1 = scan.nextInt();
+		System.out.print("Enter the ending integer: ");
+		int y2 = scan.nextInt();
+		
+		int sum = 0;
+		int count = 0;  
 	
-		// WRITE YOUR CODE HERE ...
-        Scanner scan = new Scanner(System.in);
-        int y1 = scan.nextInt();
-        int y2 = scan.nextInt();
-        int sum = 0;
-        double num = 0; 
-        while ( y1<=y2){
-            sum+=y1;
-            num++;
-        }
-        System.out.println(sum);
-
+		while (y1 <= y2) {
+			sum += y1;
+			count++;
+			y1++; 
+		}
+	
+		double average = (count > 0) ? (double) sum / count : 0;  
+		System.out.println("Sum: " + sum);
+		System.out.println("Average: " + average);
 	}
+	
 }
