@@ -1,6 +1,6 @@
 // Fill in all the methods where it says WRITE YOUR CODE HERE … 
 import java.util.Scanner;
-public class WhileLoopExercises {
+public class WhileloopExercises {
 
 	public static void main(String[] args) {
 		
