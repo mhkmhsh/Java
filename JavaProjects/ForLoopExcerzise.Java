@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ForLoopExercises {
+public class ForLoopExerzises {
 
     public static void main(String[] args) {
         System.out.println("Calling part1 method: ");
