@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "RaceRunner",
+            "request": "launch",
+            "mainClass": "RaceRunner",
+            "projectName": "Java_655ce75e"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"

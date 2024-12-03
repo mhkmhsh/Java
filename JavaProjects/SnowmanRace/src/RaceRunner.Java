@@ -24,9 +24,9 @@ public class RaceRunner {
       // ******  ADD CODE HERE *****
      
 
-        Snowman s1 = new Snowman(10,50);
-        Snowman s2 = new Snowman(10,150);
-        Snowman s3 = new Snowman(10,200);
+      Snowman s1 = new Snowman(10, 50,"cat_snowman.png","kitty");
+      Snowman s2 = new Snowman(10, 150,"redhat_snowman.png","hat");
+
        // Main game loop
        while (true) {
         StdDraw.clear();
@@ -37,7 +37,6 @@ public class RaceRunner {
             // ******  ADD CODE HERE *****
             s1.move();
             s2.move();
-            s3.move();
         }
 
 
@@ -46,7 +45,6 @@ public class RaceRunner {
         
         s1.draw();
         s2.draw();
-        s3.draw();
         
 
 
@@ -57,9 +55,6 @@ public class RaceRunner {
         }
         if(s2.getX()  >= LIMIT){
             StdDraw.text(LIMIT/2, LIMIT-100, s2.getName() + " WINS!!!");
-        }
-        if(s3.getX()  >= LIMIT){
-            StdDraw.text(LIMIT/2, LIMIT-100, s3.getName() + " WINS!!!");
         }
 
         // Refresh screen
