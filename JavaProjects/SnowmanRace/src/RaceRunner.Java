@@ -18,9 +18,12 @@ public class RaceRunner {
 
       // create at least 2 instances/objects of a Snowman
       // The first snowman should be at x=10, y = 50
+   
       // The second snowman should be at x=10, y = 150
       // The third snowman should be ???
       // ******  ADD CODE HERE *****
+     
+
         Snowman s1 = new Snowman(10,50);
         Snowman s2 = new Snowman(10,150);
         Snowman s3 = new Snowman(10,200);
