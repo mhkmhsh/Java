@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BusTester",
+            "request": "launch",
+            "mainClass": "bus.BusTester",
+            "projectName": "Java_655ce75e"
+        },
+        {
+            "type": "java",
             "name": "RaceRunner",
             "request": "launch",
             "mainClass": "RaceRunner",
