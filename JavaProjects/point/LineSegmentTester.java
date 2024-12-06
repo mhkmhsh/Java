@@ -14,5 +14,7 @@ Point temp1 = seg3.getPoint1();
 Point temp2 = seg3.getPoint2();
 System.out.println(temp1);
 System.out.println(temp2);
+double len= seg3.LengthOfSegment();
+System.out.println(len);
     }
 }
