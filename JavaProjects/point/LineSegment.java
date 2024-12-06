@@ -9,10 +9,10 @@ public LineSegment ( Point p1, Point p2, String sp1, String sp2){
     this.p1 =p1;
     this.p2=p2;
     labelPoint1 = sp1;
-    labelPoint2 = sp2
+    labelPoint2 = sp2;
 }
 public LineSegment ( Point pt1, Point pt2){
-    this(pt1, pt2,"A", "B")
+    this(pt1, pt2,"A", "B");
 }
 public double LengthOfSegment(){
     Double diffX = p1.getX() - p2.getX();
