@@ -8,6 +8,13 @@
             "type": "java",
             "name": "ArrayFunHouseRunner",
             "request": "launch",
+            "mainClass": "ArrayFunHouseRunner",
+            "projectName": "Java_655ce75e"
+        },
+        {
+            "type": "java",
+            "name": "ArrayFunHouseRunner",
+            "request": "launch",
             "mainClass": "FunHouse.ArrayFunHouseRunner",
             "projectName": "Java_655ce75e"
         },
