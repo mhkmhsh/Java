@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class OddsAndEvens
@@ -8,16 +7,20 @@ public class OddsAndEvens
 	//  elements are even.
 	private static int countEm(int[] array, boolean odd)
 	{
-return null;
+if ( odd == true ){
+return: true;
+} else {
+    return false;
+}
     }
 	
 	// use the method countEm in the next two methods
 	public static int[] getAllEvens(int[] array)
 	{
         for (int arr : array) {
-            if (arr/2 == 0) {
+            if (arr%2 == 0) {
               ev++;
-              odd=false;
+              
           }
     
       return ev;
@@ -28,9 +31,9 @@ return null;
 		int count = 0;
       
         for (int arr : array) {
-              if (arr/2 != 0) {
+              if (arr%2 != 0) {
                 count++;
-                odd=true;
+                
             }
       
         return count;
