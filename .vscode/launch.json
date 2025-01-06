@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StudentProgram",
+            "request": "launch",
+            "mainClass": "stupro.StudentProgram",
+            "projectName": "Java_655ce75e"
+        },
+        {
+            "type": "java",
+            "name": "OddsAndEvensRunner",
+            "request": "launch",
+            "mainClass": "OddsAndEvensRunner",
+            "projectName": "Java_655ce75e"
+        },
+        {
+            "type": "java",
             "name": "OddsAndEvensRunner",
             "request": "launch",
             "mainClass": "oddsandevens.OddsAndEvensRunner",
