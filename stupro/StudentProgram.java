@@ -18,9 +18,9 @@ public class StudentProgram {
         System.out.println("The number of students in grade 10 is: " + numStudentsInGrade(arr, 10) + "\n");
 
         // call printHonorRollStudents
-        //  System.out.println("The number of students with Honor Roll is: " +  printHonorRollStudents()));
-        // Student topStu = highestGPAStudent(arr);
-        // System.out.println("\nThe student with the highest gpa is: " + topStu.getName());
+        printHonorRollStudents(arr);
+      Student topStu = highestGPAStudent(arr);
+       System.out.println("\nThe student with the highest gpa is: " + topStu.getName());
     }
 
     // This method returns the averageGPA of all the students in list1
@@ -46,10 +46,10 @@ public class StudentProgram {
         int count = 0;
         for (int x = 0; x < list1.length; x++) {
             if (list1[x] != null && list1[x].getGradeLevel() == grade) {
-                    count++;
-                }
+                count++;
             }
         }
+
         return count;
     }
 
@@ -57,7 +57,7 @@ public class StudentProgram {
     public static void printHonorRollStudents(Student[] list1) {
 
         for (Student stu : list1) {
-            if (stu.getGPA() >= 3.5) {
+            if (stu != null && stu.getGPA() >= 3.5) {
 
                 System.out.println(stu.getName());
             }
@@ -67,8 +67,17 @@ public class StudentProgram {
 
     // This method returns the Student with the highest GPA
     public static Student highestGPAStudent(Student[] list1) {
+        Student top = list1[0];
+        int highest = 0;
+        for (int x = 0; x < list1.length; x++) {
+            if (list1[x] != null) {
+                if (list1[x].getGPA() > list1[highest].getGPA()) {
+                    top = list1[x];
+                    highest = x;
+                }
+            }
 
-        //*** add code here
-        return null;
+        }
+        return top;
     }
 }
