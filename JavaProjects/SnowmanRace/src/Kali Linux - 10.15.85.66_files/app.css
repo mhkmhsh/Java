@@ -1,0 +1,31 @@
+
+
+body {
+    background-color: #242424;
+    color: white;
+    background-image: url('app/ext/guacamole-branding-example/resources/images/mountain/mountain.png');
+    background-repeat: no-repeat;
+    background-size: cover, cover;
+    height: 100vh;
+}
+
+.header{
+    display: none;
+}
+
+
+.recent-connections{
+    display: none;
+}
+
+.menu-body{
+    background-color: #303030;
+}
+
+.displayOuter {
+    background-color: #242424;
+}
+
+
+
+

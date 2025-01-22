@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0138)https://guac1.cyber.org/#/client/eWFocmJxdS1LYWxpIExpbnV4AGMAanNvbg?token=A046ADAD8540D184F52D809C3C3397BFAD50B284FF6B4A791B724465F0B9FB32 -->
+<html ng-app="index" ng-controller="indexController" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><meta http-equiv="x-ua-compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,target-densitydpi=medium-dpi"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="build" content="20220819192710"><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAwJJREFUeF7tWktoE1EUPTOZqh1bW+yiKKILV7rTBFGSQNUgbhJayCIoKGnB7F1pt66k4kIQDEJC0UUWrpIsSknNItD6CfhJBasLFwriTism4HwibyRpg007mY+TYe5bJeHe8+4979z7PoSDxwfn8fxBBJACPM4AlYDHBUBNkEqASsDjDFAJeFwAtAtwC2vN5qNbSQwrKdx/fArHjp/QRFHLHsXhqWWMjI5j7f0bxONx1FY/uk4wHMdhZXkJp8+c02IfAA8JqvZ5ZuYKOL/f33RdVhYG3CYgnU4jlUp1QCuKYuFU+qF8Pp9+Y5OWbQIKhQKi0WgH3El/AE/LKwamYJtL78Kq/1rX5jp4YMzAnMZc2gTs4nn8Vv/WRmuUSiVjqCa9IpGISQT97tv2gO/rkn4kiyzf1V4gGAxahLYzTJsAJn9WBpuHUQIEcRByvbHz7FtYOEaAIAiQZfkfAoT4IuQnFwwlY8TJEQJY4qzzsj3TCgUYSbzl4wgB3QI2WgJEgAkGHFNAtVpFIBCgEqAesIkB6gFeOghls1kkk0nHe8Dq2+cIhUIm2mhvru2TYDgcRqVScYQARZFRmb2Oidv3eoo+dzeF6QefUP+w2JMfMx4dG8frVy+3fw/4Xz1AliXcvHENc3fmAahITF9FLjOPIxOXcSl0COWHc3j2rfOi1nPGXRz64jLECBD37rMqJ904Q0N7NhSQz+cRi8UcKYG+JaDRaKDZ7P1ho8ViLpdDIpFAJpOBKIraz+x7a/C8AFWVtUuYsHu/7pWzyrBDAT/rKoZF3ipsDYedLtlonTDZ989fvmJqMopisYhYbFIjQJIkSOqgpXPrAesgQI+DaRvfAKBsPLL8CJzFSLXsXQJahPaFAnwXl6AsnDe9yEYAHCeAPX+zxxCet7YH6CXDcQL0BmqXHRHgmV2gi4RIAaQArxyEqAS2ZoB6APUA6gHO3QbtOt25BZf+J+iWlbIrTlKAXcy6BZcU4JaVsitOUoBdzLoFlxTglpWyK05SgF3MugXX8wr4A0jpc2qLqtklAAAAAElFTkSuQmCC"><link rel="icon" type="image/png" sizes="144x144" href="data:image/png;base64,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"><link rel="apple-touch-icon" type="image/png" href="https://guac1.cyber.org/images/logo-144.png"><link rel="stylesheet" href="./1.guacamole.a0c95d171bdf80212497.css"><link rel="stylesheet" href="./app.css"><title ng-bind="page.title | translate" class="ng-binding">yahrbqu-Kali Linux</title></head><body translate-cloak="" ng-class="page.bodyClassName" ng-switch="applicationState" class="client"><!-- ngSwitchWhen: loggedOut --><!-- ngSwitchWhen: fatalError --><!-- ngSwitchWhen: awaitingCredentials --><!-- ngSwitchWhen: ready --><div ng-switch-when="ready" class="ng-scope"><!-- ngIf: guacNotification.getStatus() --><!-- ngView: --><div id="content" ng-view="" class="ng-scope">
+<guac-viewport class="ng-scope ng-isolate-scope"><div class="viewport" ng-transclude="" style="width: 1920px; height: 851px;">
+
+    <!-- Client view -->
+    <div class="client-view ng-scope">
+        <div class="client-view-content">
+
+            <!-- Central portion of view -->
+            <div class="client-body" guac-touch-drag="menuDrag">
+
+                <!-- All connections in current display -->
+                <guac-tiled-clients on-close="closeClientTile($client)" client-group="clientGroup" emulate-absolute-mouse="menu.emulateAbsoluteMouse" class="ng-isolate-scope"><div class="tiled-client-grid">
+    <!-- ngRepeat: clientRow in getClientGrid(clientGroup) --><div class="tiled-client-row ng-scope" ng-repeat="clientRow in getClientGrid(clientGroup)">
+        <!-- ngRepeat: client in clientRow --><div class="tiled-client-cell ng-scope" ng-repeat="client in clientRow">
+
+            <!-- ngIf: client --><div class="client-tile ng-scope focused" ng-if="client" ng-class="{
+                    &#39;focused&#39; : client.clientProperties.focused,
+                    &#39;shared&#39;  : isShared(client)
+                }" guac-click="getFocusAssignmentCallback(client)">
+                <!-- ngIf: hasMultipleClients(clientGroup) -->
+                <div class="main ng-isolate-scope" ng-class="{ &#39;drop-pending&#39;: dropPending }" guac-resize="mainElementResized" guac-touch-drag="clientDrag" guac-touch-pinch="clientPinch" client="client" emulate-absolute-mouse="emulateAbsoluteMouse" style="overflow: hidden;"><object class="resize-sensor" type="text/html" data="./blank.html"></object>
+
+    <!-- Display -->
+    <div class="displayOuter">
+
+        <div class="displayMiddle">
+            <div class="display software-cursor" style="cursor: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAUCAYAAACwG3xrAAAAAXNSR0IArs4c6QAAAKpJREFUKFO9kUEKxCAMRX+WXUh33XgH8QIepofrVbr3EgV3ioi4KBl0aCltp4thGDdJyM9P8JFzjodhQH05Z3Rd1/JlWSClJEopsZQSIQSM44hpmlBKaXXf90TWWlZKtSkiAjO33FoLrTVRq4Da4E1ANQGq8lHwdv3gsPeeVjw67INfO/zhhl+uOOI+wrrg9t7DGIN5nrGu6z3uGCOEEPe4N7znuH/1RvUcX4TxoBX5Kk3dAAAAAElFTkSuQmCC&quot;) 4 9, auto;"><div style="position: relative; width: 1512.89px; height: 851px;"><div style="position: relative; width: 1920px; height: 1080px; transform-origin: 0px 0px; transform: scale(0.787963, 0.787963);"><div style="width: 1920px; height: 1080px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1920" height="1088" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+        </div>
+
+    </div>
+
+</div>
+
+                <!-- Client-specific status/error dialog -->
+                <div class="client-status-modal ng-isolate-scope" ng-class="{ shown: status }" client="client">
+    <guac-modal><div class="modal-contents">
+    <ng-transclude>
+        <form class="notification ng-pristine ng-valid ng-scope ng-isolate-scope" ng-class="notification.className" ng-submit="notification.formSubmitCallback()" notification="status">
+
+    <!-- Notification title -->
+    <div ng-show="notification.title" class="title-bar ng-hide">
+        <div class="title ng-binding"></div>
+    </div>
+
+    <div class="body">
+
+        <!-- Notification text -->
+        <p ng-show="notification.text" class="text ng-scope ng-hide" translate="" translate-values=""></p>
+
+        <!-- Arbitrary parameters -->
+        <div class="parameters ng-hide" ng-show="notification.forms">
+            <div class="form-group ng-isolate-scope" namespace="notification.formNamespace" content="notification.forms" model="notification.formModel" model-only="true">
+    <!-- ngRepeat: form in forms -->
+</div>
+        </div>
+
+        <!-- Current progress -->
+        <div class="progress ng-hide" ng-show="notification.progress"><div class="bar ng-hide" ng-show="progressPercent" ng-style="{&#39;width&#39;: progressPercent + &#39;%&#39;}"></div><div ng-show="notification.progress.text" translate="" translate-values="{PROGRESS: notification.progress.value, UNIT: notification.progress.unit}" class="ng-scope ng-hide"></div></div>
+
+        <!-- Default action countdown text -->
+        <p class="countdown-text ng-scope ng-hide" ng-show="notification.countdown.text" translate="" translate-values="{REMAINING: timeRemaining}"></p>
+
+    </div>
+
+    <!-- Buttons -->
+    <div ng-show="notification.actions.length" class="buttons ng-hide">
+        <!-- ngRepeat: action in notification.actions -->
+    </div>
+
+
+</form>
+    </ng-transclude>
+</div>
+</guac-modal>
+</div>
+            </div><!-- end ngIf: client -->
+
+        </div><!-- end ngRepeat: client in clientRow -->
+    </div><!-- end ngRepeat: clientRow in getClientGrid(clientGroup) -->
+</div>
+</guac-tiled-clients>
+
+            </div>
+
+            <!-- Bottom portion of view -->
+            <div class="client-bottom">
+
+                <!-- Text input -->
+                <!-- ngIf: showTextInput -->
+
+                <!-- On-screen keyboard -->
+                <!-- ngIf: showOSK -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- File transfers -->
+    <div id="file-transfer-dialog" ng-show="hasTransfers()" class="ng-scope ng-hide">
+        <div class="transfer-manager ng-isolate-scope" client-group="clientGroup">
+
+    <!-- File transfer manager header -->
+    <div class="header">
+        <h2 class="ng-binding">File Transfers</h2>
+        <button ng-click="clearCompletedTransfers()" class="ng-binding">Clear</button>
+    </div>
+
+    <!-- Sent/received files -->
+    <div class="transfer-manager-body">
+        <!-- ngRepeat: client in clientGroup.clients --><div class="transfer-manager-body-section ng-scope ng-hide" ng-repeat="client in clientGroup.clients" ng-show="hasTransfers(client)">
+            <h3 ng-show="hasMultipleClients(clientGroup)" class="ng-binding ng-hide">yahrbqu-Kali Linux</h3>
+            <div class="transfers">
+                <!-- ngRepeat: upload in client.uploads -->
+            </div>
+        </div><!-- end ngRepeat: client in clientGroup.clients -->
+    </div>
+
+</div>
+    </div>
+
+    <!-- Connection stability warning -->
+    <div id="connection-warning" ng-show="isConnectionUnstable()" class="ng-binding ng-scope ng-hide">
+        The network connection to the server appears unstable.
+    </div>
+
+    <!-- Menu -->
+    <div class="menu ng-scope" ng-class="{open: menu.shown}" id="guac-menu">
+        <!-- ngIf: menu.shown -->
+    </div>
+
+    <!-- Filesystem menu -->
+    <div id="filesystem-menu" class="menu ng-scope" ng-class="{open: isFilesystemMenuShown()}">
+        <div class="menu-content">
+
+            <!-- Stationary header -->
+            <div class="header">
+                <h2 class="ng-binding"></h2>
+                <button class="upload button ng-binding" guac-upload="uploadFiles">Upload Files</button>
+                <button class="back ng-binding" ng-click="hideFilesystemMenu()">Back</button>
+            </div>
+
+            <!-- Breadcrumbs -->
+            <div class="header breadcrumbs"><div class="breadcrumb root" ng-click="changeDirectory(filesystemMenuContents, filesystemMenuContents.root)"></div><!-- ngRepeat: file in getPath(filesystemMenuContents.currentDirectory) -->
+            </div>
+
+            <!-- Scrollable body -->
+            <div class="menu-body">
+                <div class="file-browser ng-isolate-scope" client="client" filesystem="filesystemMenuContents">
+
+    <!-- Current directory contents -->
+    <div class="current-directory-contents"></div>
+
+</div>
+            </div>
+
+        </div>
+    </div>
+
+</div></guac-viewport>
+</div><div id="other-connections"><div class="client-panel ng-isolate-scope has-clients" ng-class="{ &#39;has-clients&#39;: hasClientGroups(), &#39;hidden&#39; : panelHidden() }" client-groups="getManagedClientGroups()">
+
+    <!-- Toggle panel visibility -->
+    <div class="client-panel-handle" ng-click="togglePanel()"></div>
+
+    <!-- List of connection thumbnails -->
+    <ul class="client-panel-connection-list">
+        <!-- ngRepeat: clientGroup in clientGroups | orderBy: '-lastUsed' --><!-- ngIf: !clientGroup.attached --><!-- end ngRepeat: clientGroup in clientGroups | orderBy: '-lastUsed' -->
+    </ul>
+
+</div></div></div><!-- end ngSwitchWhen: --><script src="./Blob.js.download"></script><script src="./datalist-polyfill.min.js.download"></script><script src="./all.min.js.download"></script><script src="./jquery.min.js.download"></script><script src="./lodash.min.js.download"></script><script src="./angular.min.js.download"></script><script src="./1.guacamole.3328a7adfba5172d4be2.js.download"></script><script src="./guacamole.000072ac0fef50558aa3.js.download"></script><script src="./templates.js.download"></script><script src="./app.js.download"></script><div class="pcr-app guac-input-color-picker" data-theme="monolith" aria-label="color picker dialog" role="window" style="left: 0px; top: 8px;">
+          <div class="pcr-selection">
+            <div class="pcr-color-preview">
+              <button type="button" class="pcr-last-color" aria-label="use previous color" style="--pcr-color: rgba(0, 0, 0, 1);"></button>
+              <div class="pcr-current-color" style="--pcr-color: rgba(0, 0, 0, 1);"></div>
+            </div>
+
+            <div class="pcr-color-palette">
+              <div class="pcr-picker" style="left: calc(0% - 9px); top: calc(100% - 9px); background: rgb(0, 0, 0);"></div>
+              <div class="pcr-palette" tabindex="0" aria-label="color selection area" role="listbox" style="background: linear-gradient(to top, rgb(0, 0, 0), transparent), linear-gradient(to left, rgb(255, 0, 0), rgb(255, 255, 255));"></div>
+            </div>
+
+            <div class="pcr-color-chooser">
+              <div class="pcr-picker" style="left: calc(0% - 9px); background-color: rgb(255, 0, 0);"></div>
+              <div class="pcr-hue pcr-slider" tabindex="0" aria-label="hue selection slider" role="slider"></div>
+            </div>
+
+            <div class="pcr-color-opacity" style="display:none" hidden="">
+              <div class="pcr-picker"></div>
+              <div class="pcr-opacity pcr-slider" tabindex="0" aria-label="selection slider" role="slider"></div>
+            </div>
+          </div>
+
+          <div class="pcr-swatches "></div>
+
+          <div class="pcr-interaction">
+            <input class="pcr-result" type="text" spellcheck="false" aria-label="color input field">
+
+            <input class="pcr-type active" data-type="HEXA" value="HEX" type="button" style="display:none" hidden="">
+            <input class="pcr-type" data-type="RGBA" value="RGB" type="button" style="display:none" hidden="">
+            <input class="pcr-type" data-type="HSLA" value="HSL" type="button" style="display:none" hidden="">
+            <input class="pcr-type" data-type="HSVA" value="HSV" type="button" style="display:none" hidden="">
+            <input class="pcr-type" data-type="CMYK" value="CMYK" type="button" style="display:none" hidden="">
+
+            <input class="pcr-save" value="Save" type="button" aria-label="save and close">
+            <input class="pcr-cancel" value="Cancel" type="button" aria-label="cancel and close">
+            <input class="pcr-clear" value="Clear" type="button" style="display:none" hidden="" aria-label="clear and close">
+          </div>
+        </div><textarea class="clipboard-service-target"></textarea><textarea style="position: fixed; outline: none; border: none; margin: 0px; padding: 0px; height: 0px; width: 0px; left: 0px; bottom: 0px; resize: none; background: transparent; color: transparent;"></textarea></body></html>
