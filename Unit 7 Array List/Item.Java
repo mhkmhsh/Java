@@ -23,6 +23,6 @@ public void double setPrice( double a){
     price = a;
 }
 public String toString(){
-    return name, quantity, price;
+    return "Name: " + name + "Quantity: " +  quantity + "Price: " + price;
 }
 }
