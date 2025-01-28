@@ -13,28 +13,22 @@ public class StoreInventoryTester {
         storeInventory.addItem(new Item("headphones", 10.8, 40));
         storeInventory.addItem(new Item("charger", 5.3, 30));
        
-        for(int x = 0; x < storeInventory.size(); x++) {
-            System.out.println(storeInventory.getItem(x));
-        }
+    
+            System.out.println(storeInventory.toString());
+      
         
         storeInventory.removeItem("pen");
         System.out.println("");
-        for(int x = 0; x < storeInventory.size(); x++) {
-            System.out.println(storeInventory.getItem(x));
-        }
+        System.out.println(storeInventory.toString());
         
         storeInventory.updatePrice("notebook", 150);
         System.out.println("");
-        for(int x = 0; x < storeInventory.size(); x++) {
-            System.out.println(storeInventory.getItem(x));
-        }
+        System.out.println(storeInventory.toString());
         System.out.println("");
         int largestIndex = storeInventory.largestQuantityIndex();
-        
-        System.out.println(largestIndex);
-       
-        for(int x = 0; x < storeInventory.size(); x++) {
-            System.out.println(storeInventory.getItem(x));
-        }
+        System.out.println("");
+        System.out.println("this is the largest index:  " + largestIndex);
+        System.out.println("");
+        System.out.println(storeInventory.toString());
     }
 }
