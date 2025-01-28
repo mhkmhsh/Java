@@ -58,4 +58,11 @@ public class Inventory {
     public Item getItem(int index) {
         return inStock.get(index);
     }
+
+    public ArrayList<Item> getInventoryList() {
+        for( Item item : inStock){
+            System.out.println(item);
+        }
+            return inStock;
+    }
 }
