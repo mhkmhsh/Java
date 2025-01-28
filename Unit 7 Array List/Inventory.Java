@@ -1,5 +1,6 @@
 import java.util.*;
-public class Inventory{
+
+public class Inventory {
     private ArrayList<Item> inStock;
 
     public Inventory() {
@@ -10,7 +11,6 @@ public class Inventory{
         inStock.add(item);
     }
 
-  
     public void removeItem(String name) {
         for (int i = 0; i < inStock.size(); i++) {
             if (inStock.get(i).getName().equals(name)) {
@@ -19,6 +19,7 @@ public class Inventory{
             }
         }
     }
+
     public void removeItem() {
         for (int i = 0; i < inStock.size(); i++) {
             if (inStock.get(i).getQuantity() == 0) {
@@ -27,7 +28,7 @@ public class Inventory{
             }
         }
     }
- 
+
     public void updatePrice(String name, double percentChange) {
         for (int i = 0; i < inStock.size(); i++) {
             Item item = inStock.get(i);
@@ -50,7 +51,11 @@ public class Inventory{
         return largestIndex;
     }
 
-    public ArrayList<Item> getInventoryList() {
-        return inStock;
+    public int size() {
+        return inStock.size();
+    }
+
+    public Item getItem(int index) {
+        return inStock.get(index);
     }
 }
