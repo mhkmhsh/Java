@@ -20,7 +20,7 @@ public class TwoDarrayTester {
         System.out.println();
 
         // *****write code to call sumRow for each row
-        /*  Begin multi line comment
+       
 		int sumFirstRow = 
 		int sumSecondRow = 
 		int sumThirdRow = 
@@ -31,7 +31,7 @@ public class TwoDarrayTester {
 		System.out.println("The sum of the elements in the 3rd row should be 13 \t the method returned: " + sumThirdRow);
 		
                  //End multi line comment 
-         */
+        
     }
 
     public static int sumColumn(int[][] arr, int col) {
@@ -39,7 +39,9 @@ public class TwoDarrayTester {
         int sum = 0;
         // loop over all the rows for the given column
         // sum up the elements
-
+        for (int col=0; col<arr.length; col++){
+            sum += arr[col];
+        }
         return sum;
     }
 
@@ -48,6 +50,10 @@ public class TwoDarrayTester {
         int sum = 0;
         // loop over all the columns for the given row
         // sum up the elements
+
+        for (int row=0; row<arr.length; row++){
+            sum += arr[row];
+        }
 
         return sum;
     }
