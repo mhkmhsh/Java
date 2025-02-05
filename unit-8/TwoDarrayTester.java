@@ -1,4 +1,3 @@
-
 public class TwoDarrayTester {
 
     public static void main(String[] args) {
@@ -7,10 +6,10 @@ public class TwoDarrayTester {
         {0, -5, 6, 12}};
 
         // call sumColumn to sum up each column
-        int sumFirstCol = sumColumn();  // *****fill in parameters to pass to the method
-        int sumSecondCol = sumColumn();
-        int sumThirdCol = sumColumn();
-        int sumFourthCol = sumColumn();
+        int sumFirstCol = sumColumn(my2Darr, 0);  // *****fill in parameters to pass to the method
+        int sumSecondCol = sumColumn(my2Darr, 1);
+        int sumThirdCol = sumColumn(my2Darr, 2);
+        int sumFourthCol = sumColumn(my2Darr, 3);
 
         System.out.println("The sum of the elements in the 1st column should be 2 \t the method returned: " + sumFirstCol);
         System.out.println("The sum of the elements in the 2nd column should be -1 \t the method returned: " + sumSecondCol);
@@ -20,18 +19,14 @@ public class TwoDarrayTester {
         System.out.println();
 
         // *****write code to call sumRow for each row
-       
-		int sumFirstRow = 
-		int sumSecondRow = 
-		int sumThirdRow = 
-		
-		
-		System.out.println("The sum of the elements in the 1st row should be 10 \t the method returned: " + sumFirstRow);
-		System.out.println("The sum of the elements in the 2nd row should be 6 \t the method returned: " + sumSecondRow);
-		System.out.println("The sum of the elements in the 3rd row should be 13 \t the method returned: " + sumThirdRow);
-		
-                 //End multi line comment 
-        
+        int sumFirstRow = sumRow(my2Darr, 0); 
+        int sumSecondRow = sumRow(my2Darr, 1); 
+        int sumThirdRow = sumRow(my2Darr, 2); 
+
+        System.out.println("The sum of the elements in the 1st row should be 10 \t the method returned: " + sumFirstRow);
+        System.out.println("The sum of the elements in the 2nd row should be 6 \t the method returned: " + sumSecondRow);
+        System.out.println("The sum of the elements in the 3rd row should be 13 \t the method returned: " + sumThirdRow);
+
     }
 
     public static int sumColumn(int[][] arr, int col) {
@@ -39,8 +34,8 @@ public class TwoDarrayTester {
         int sum = 0;
         // loop over all the rows for the given column
         // sum up the elements
-        for (int col=0; col<arr.length; col++){
-            sum += arr[col];
+        for(int row = 0; row < arr.length; row++) {
+            sum += arr[row][col]; 
         }
         return sum;
     }
@@ -51,8 +46,8 @@ public class TwoDarrayTester {
         // loop over all the columns for the given row
         // sum up the elements
 
-        for (int row=0; row<arr.length; row++){
-            sum += arr[row];
+        for(int col = 0; col < arr[row].length; col++) {
+            sum += arr[row][col]; 
         }
 
         return sum;
