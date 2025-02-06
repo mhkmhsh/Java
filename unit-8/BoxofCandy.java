@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class BoxOfCandy
@@ -23,9 +24,19 @@ public class BoxOfCandy
    * Returns false if there is no piece of candy in column col and returns true otherwise.
    * Precondition: col is a valid column index in box.
    */
+
   public boolean moveCandyToFirstRow(int col)
   {
- 
+    for(int row = 0; row < box.length; row++) {
+        if (box[row][col] != null) {  
+           
+            box[0][col] = box[row][col];
+            box[row][col] = null;  
+            return true;
+        }
+    }
+  
+    return false;
   }
   
   /******************  Part (b) ******************/
