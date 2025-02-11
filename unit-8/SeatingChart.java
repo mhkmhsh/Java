@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,8 +24,15 @@ public class SeatingChart
    */
   public SeatingChart(List<Student> studentList, int rows, int cols)
   {
-
-		// WRITE YOUR CODE HERE FOR part A
+seats = new Student[rows][cols];
+		for(int r=0; r< Array.length; r++){
+            for(int c=0; c<Array.length; c++){
+                if( StudentIndex<studentList.get(StudentIndex)){
+                    seats[rows][cols]=studentList.get(StudentIndex);
+                    StudentIndex++;
+                }
+            }
+        }
   }
   
   
