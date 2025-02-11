@@ -47,7 +47,14 @@ public class BoxOfCandy
    */
   public Candy removeNextByFlavor(String flavor)
   {
- 
+ for( int r = 0; r< box.length - 1; r--){
+    for( int c = 0; c< box[r].length; c++ ){
+        Candy candy = box[r][c];
+        if( candy!= null && candy.getFlavor().equals(flavor)){
+            box[r][c]=
+        }
+    }
+ }
   }
 
 /******************  Tests ******************/
