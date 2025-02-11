@@ -57,7 +57,7 @@ public class SeatingChart {
         // WRITE YOUR CODE HERE FOR part B and take out the return 0
       int count=0;
       for(int row=0; row<seats.length;row++){
-        for(int col=0; col<seats[0].length;coll){
+        for(int col=0; col<seats[0].length;col++){
             if(seats[row][col] !=null && seats [row][col].getAbsenceCount()>allowedAbsences){
                 seats[row][col]=null;  
                 count++;         
