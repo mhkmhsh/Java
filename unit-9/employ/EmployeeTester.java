@@ -23,6 +23,21 @@ public class EmployeeTester {
 		System.out.print(kelly.getVacationDays() + ", ");
 		System.out.println(kelly.getVacationForm());
 		kelly.sue();
+
+        System.out.print("Marketer: ");
+        Marketer john = new Marketer();
+		System.out.print(john.getHours() + ", ");
+		System.out.printf("$%.2f, ", john.getSalary());
+		System.out.print(john.getVacationDays() + ", ");
+		System.out.println(john.getVacationForm());
+
+        System.out.print("Legal Secretary: ");
+        LegalSecretary bob = new LegalSecretary();
+		System.out.print(bob.getHours() + ", ");
+		System.out.printf("$%.2f, ", bob.getSalary());
+		System.out.print(bob.getVacationDays() + ", ");
+		System.out.println(bob.getVacationForm());
+		 
 	}
 
 }
