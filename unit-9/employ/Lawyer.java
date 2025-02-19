@@ -3,9 +3,12 @@ public class Lawyer extends Employee{
         return "pink";
     }
     public int getVacationDays(){
-        return 15;
+        return super.getVacationDays() + 5;
     }
     public void sue(){
         System.out.println("I'll See you in court!");
+    }
+    public double getSalary() {
+        return super.getSalary() + 10000.0;
     }
 }
