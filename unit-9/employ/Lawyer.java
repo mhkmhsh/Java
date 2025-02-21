@@ -1,4 +1,7 @@
 public class Lawyer extends Employee{
+    public Lawyer(){
+        super(years);
+    }
     public String getVacationForm(){
         return "pink";
     }
