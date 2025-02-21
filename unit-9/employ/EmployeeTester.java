@@ -37,7 +37,7 @@ public class EmployeeTester {
 		System.out.printf("$%.2f, ", bob.getSalary());
 		System.out.print(bob.getVacationDays() + ", ");
 		System.out.println(bob.getVacationForm());
-		 
+		 bob.fileLegalBriefs();
 	}
 
 }

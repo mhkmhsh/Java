@@ -3,4 +3,7 @@ public class LegalSecretary extends Secretary{
         double baseSalary = super.getSalary();
         return baseSalary + 5000.0;
     }
+    public void fileLegalBriefs(){
+		System.out.println("I could file all day");
+	}
 }
