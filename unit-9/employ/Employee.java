@@ -1,19 +1,32 @@
+
 public class Employee {
- private int years;
-    public Employee(int initialYears){
+
+    private int years;
+
+    public Employee(int initialYears) {
         years = initialYears;
     }
-    public int getHours(){
+    public int getYears(){
+        return years;
+    }
+
+    public int getHours() {
         return 40;
     }
-    public double getSalary(){
+
+    public double getSalary() {
         return 40000.0;
     }
-    public int getVacationDays(){
-        return 10 +2 * years;
+
+    public int getVacationDays() {
+        return 10 + getSeniorityBonus();
     }
-    public String getVacationForm(){
+    public int getSeniorityBonus(){
+        return 2*years;
+    }
+
+    public String getVacationForm() {
         return "yellow";
     }
-    
+
 }

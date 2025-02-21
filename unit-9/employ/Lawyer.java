@@ -1,16 +1,22 @@
-public class Lawyer extends Employee{
-    public Lawyer(){
+
+public class Lawyer extends Employee {
+
+    public Lawyer(int years) {
         super(years);
     }
-    public String getVacationForm(){
+
+    public String getVacationForm() {
         return "pink";
     }
-    public int getVacationDays(){
+
+    public int getVacationDays() {
         return super.getVacationDays() + 5;
     }
-    public void sue(){
+
+    public void sue() {
         System.out.println("I'll See you in court!");
     }
+
     public double getSalary() {
         return super.getSalary() + 10000.0;
     }
