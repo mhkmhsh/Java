@@ -10,10 +10,16 @@ public class BouncingBalls {
     {
         width = w;
         height = h;
-        balls = new Ball[1];
-        balls[0] = new Ball(50,50,Color.RED);
-       
-        
+        balls = new Ball[9];
+        balls[0] = new Ball(100,50,Color.BLUE);
+        balls[1] = new Ball(50,0,Color.RED);
+        balls[2] = new Ball(0,0,Color.MAGENTA);
+        balls[3] = new Ball(100,100,Color.YELLOW);
+        balls[4] = new Ball(100,0,Color.PINK);
+        balls[5] = new Ball(10,5,Color.BLUE);
+        balls[6] = new Ball(50,20,Color.RED);
+        balls[7] = new Ball(30,40,Color.MAGENTA);
+        balls[8] = new Ball(20,130,Color.YELLOW);
     }
 
 
@@ -44,15 +50,13 @@ public class BouncingBalls {
 
             // display and pause for 50 ms
             StdDraw.show();
-            StdDraw.pause(50); // this controls speed
+            StdDraw.pause(10); // this controls speed
             court.moveBalls();
             // set the background to light gray to erase
-            StdDraw.clear(StdDraw.LIGHT_GRAY); //set every pixel
+            StdDraw.clear(StdDraw.BLACK); //set every pixel
         } 
 
 
     }
 
 }
-BouncingBalls.java
-Whoops! There was a problem previewing Bouncing Ball Lab Installation Guide Visual Studio. Retrying.

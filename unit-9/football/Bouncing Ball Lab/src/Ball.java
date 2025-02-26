@@ -20,10 +20,10 @@ public class Ball
      * with diameter of 10 and xStep= 5
      * yStep = 3 using other constructor (this)
      */
-  //  public Ball()
- //   {
-  //    
-  //  }
+  public Ball(int x, int y, Color c)
+    {
+        this(x,y,10,5,4,c);
+    }
     
     /**
      * Constructor
@@ -169,5 +169,3 @@ public class Ball
 	}
         
 }
-Ball.java
-Whoops! There was a problem previewing Bouncing Ball Lab Installation Guide Visual Studio. Retrying.

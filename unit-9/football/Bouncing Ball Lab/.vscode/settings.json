@@ -4,5 +4,6 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "c:\\Users\\525MMahesh\\Downloads\\stdlib.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
