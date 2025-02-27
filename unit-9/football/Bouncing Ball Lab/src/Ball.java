@@ -1,18 +1,19 @@
 import java.awt.*;
+import javazoom.jl.decoder.Bitstream;
+import javazoom.jl.decoder.BitstreamException;
+import javazoom.jl.decoder.BitstreamFactory;
+import javazoom.jl.decoder.BitstreamIOException;
+import javazoom.jl.decoder.BitstreamUnknownException;
+import javazoom.jl.decoder.Bitstream;
 
-/**
- * Creates a ball object that bounces off
- * the walls
- * 
- * @author kimberly.jans
- * @version March 29, 2018
- *
- */
+// Make sure to import the JLayer library if it's downloaded
+
 public class Ball
 {
     private int xLoc, yLoc, diameter; //initial location and size
     private int xStep, yStep; // movement offset
     private Color ballColor;
+    private Player boomPlayer; // Player for MP3 sound
     
     /**
      * Default Constructor
@@ -20,23 +21,10 @@ public class Ball
      * with diameter of 10 and xStep= 5
      * yStep = 3 using other constructor (this)
      */
-  public Ball(int x, int y, Color c)
+    public Ball(int x, int y, Color c)
     {
-        this(x,y,10,5,4,c);
+        this(x, y, 10, 5, 4, c);
     }
-    
-    /**
-     * Constructor
-     * @param x - x position
-     * @param y - y position
-     * @param c - color of ball
-     * with diameter of 10 and xStep= 5
-     * yStep = 3 using other constructor (this)
-     */
-  //  public Ball(int x, int y,  Color c)
-  //  {
-  //     
-   // }
     
     /**
      * Constructor - sets all the instance vars
@@ -55,117 +43,123 @@ public class Ball
         xStep = xMove;
         yStep = yMove;
         ballColor = c;
-    }
-    
 
-    
+        // Initialize the MP3 player for the sound
+        try {
+            File soundFile = new File("boom.mp3"); // Ensure you have the "boom.mp3" file in the project directory
+            boomPlayer = new Player(new FileInputStream(soundFile)); // Initialize JLayer Player
+        } catch (FileNotFoundException | BitstreamException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
-     * move the ball around the screen bouncing off walls
+     * Move the ball around the screen bouncing off walls
      * @param width  - width of screen
      * @param height - height of screen
      */
     public void move(int width, int height)
     {
-        int radius = diameter/2;
+        int radius = diameter / 2;
 
-     // bounce off wall according to law of elastic collision
+        // bounce off wall according to the law of elastic collision
         if (Math.abs(xLoc + xStep) + radius > width) {
             xStep = -xStep;
-            StdAudio.play("bell.mp3");
+            playBoomSound(); // Play sound when bouncing off the horizontal wall
         }
         if (Math.abs(yLoc + yStep) + radius > height)  {
             yStep = -yStep;
-            StdAudio.play("bell.mp3");
+            playBoomSound(); // Play sound when bouncing off the vertical wall
         }
         
-        xLoc += xStep; //move the location of ball
+        xLoc += xStep; // move the location of the ball
         yLoc += yStep;
-        
-        
     }
     
+    /**
+     * Play the "boom" sound when the ball hits a wall
+     */
+    private void playBoomSound()
+    {
+        try {
+            if (boomPlayer != null) {
+                boomPlayer.close(); // Stop previous sound if still playing
+                boomPlayer = new Player(new FileInputStream("boom.mp3"));
+                boomPlayer.play(); // Play the sound
+            }
+        } catch (FileNotFoundException | BitstreamException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Draw the ball on the screen at its current position and color
      */
     public void drawBall()
     {  
-            // draw ball on the screen
-            StdDraw.setPenColor(ballColor);
-            StdDraw.filledCircle(xLoc, yLoc, diameter/2);  
+        // draw ball on the screen
+        StdDraw.setPenColor(ballColor);
+        StdDraw.filledCircle(xLoc, yLoc, diameter / 2);  
     }
-     
-   // Getters and Setters for all the instance variables
+
+    // Getters and Setters for all the instance variables
     public int getX()
     {
         return xLoc;
     }
-    
+
     public int getY()
     {
         return yLoc;
     }
-    
+
     public int getDiam()
     {
         return diameter;
     }
-    
+
     public void setDiam(int d)
     {
         diameter = d;
     }
-    
+
     public void setColor(Color c)
     {
         ballColor = c;
     }
-    
+
     public Color getColor()
     {
         return ballColor;
     }
-    
-  
-	/**
-	 * @param xLoc the xLoc to set
-	 */
-	public void setxLoc(int xLoc) {
-		this.xLoc = xLoc;
-	}
 
-	/**
-	 * @param yLoc the yLoc to set
-	 */
-	public void setyLoc(int yLoc) {
-		this.yLoc = yLoc;
-	}
+    public void setxLoc(int xLoc)
+    {
+        this.xLoc = xLoc;
+    }
 
-	/**
-	 * @param xStep the xStep to set
-	 */
-	public void setxStep(int xStep) {
-		this.xStep = xStep;
-	}
+    public void setyLoc(int yLoc)
+    {
+        this.yLoc = yLoc;
+    }
 
-	/**
-	 * @param yStep the yStep to set
-	 */
-	public void setyStep(int yStep) {
-		this.yStep = yStep;
-	}
+    public void setxStep(int xStep)
+    {
+        this.xStep = xStep;
+    }
 
-	/**
-	 * @return the xStep
-	 */
-	public int getxStep() {
-		return xStep;
-	}
+    public void setyStep(int yStep)
+    {
+        this.yStep = yStep;
+    }
 
-	/**
-	 * @return the yStep
-	 */
-	public int getyStep() {
-		return yStep;
-	}
-        
+    public int getxStep()
+    {
+        return xStep;
+    }
+
+    public int getyStep()
+    {
+        return yStep;
+    }
 }
