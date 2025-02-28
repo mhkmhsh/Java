@@ -5,7 +5,7 @@ public class SizeChangingBall extends Ball{
     private int maxDiameter, minDiameter;
     private int diameterStep;
 
-    public sizeChangingBall(int xStart, int yStart, Color c, int maxD) {
+    public SizeChangingBall(int xStart, int yStart, Color c, int maxD) {
         super(xStart, yStart, c);
         maxDiameter = maxD;
         minDiameter =2;
