@@ -1,4 +1,4 @@
-
+import java.awt.*;
 public class SizeChangingBall {
 
     private int maxDiameter, minDiameter;
