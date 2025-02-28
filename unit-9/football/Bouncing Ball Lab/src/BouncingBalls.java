@@ -10,9 +10,10 @@ public class BouncingBalls {
     {
         width = w;
         height = h;
-        balls = new Ball[2];
+        balls = new Ball[3];
         balls[0] = new Ball(100,50,Color.BLUE);
         balls[1] = new ColorfulBall(10,10,20,5,8);
+        balls[2] = new SizeChangingBall(200,200,Color.CYAN, 50);
       
     }
 
