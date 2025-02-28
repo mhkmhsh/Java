@@ -1,5 +1,6 @@
 import java.awt.*;
-public class SizeChangingBall {
+
+public class SizeChangingBall extends Ball{
 
     private int maxDiameter, minDiameter;
     private int diameterStep;
