@@ -24,7 +24,7 @@ public class Ball
   public Ball(int x, int y, Color c)
     {
      
-        this(0,0,10,5,3,Color.black);
+        this(0,0,10,5,3,c);
     }
     
     /**
