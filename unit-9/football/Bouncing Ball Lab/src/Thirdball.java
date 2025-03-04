@@ -1,17 +1,20 @@
+
 import java.awt.*;
 
-public class Thirdball extends Ball{
+public class Thirdball extends Ball {
+
     private int radius;
-    public Thirdball(double x, double y, double radius, Color c) {
+
+    public Thirdball(double x, double y, Color c, int radius) {
         super(x, y, c);
-this.radius=radius;
+        this.radius = radius;
 
-public void Thirdball(){
-    StdDraw.setPenColor(getColor());
-    StdDraw.filledSquare(getX(), getY(), radius);
-}
 
+    public void Thirdball() {
+        StdDraw.setPenColor(getColor());
+        StdDraw.filledSquare(getX(), getY(), radius);
     }
 
-   
+}
+
 }
