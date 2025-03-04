@@ -1,9 +1,13 @@
 {
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\525MMahesh\\Downloads\\stdlib.jar"
-    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\525MMahesh\\Downloads\\stdlib.jar"
+        ]
+    },
     "java.debug.settings.onBuildFailureProceed": true
 }

@@ -9,7 +9,7 @@ public class Thirdball extends Ball {
         this.radius = radius;
     }
 
-    public void draw() {
+    public void drawBall() {
         StdDraw.setPenColor(getColor());
         StdDraw.filledSquare(getX(), getY(), radius);
     }
