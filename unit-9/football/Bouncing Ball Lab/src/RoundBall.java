@@ -1,15 +1,30 @@
 
+import java.awt.*;
+
 public class RoundBall extends Ball {
 
-    private int x, y;
-    private int radius = 20;
+    private int radius;
 
-    public void move() {
+    public RoundBall(int x, int y, Color c, int radius) {
+        super(x, y, c);
+        this.radius = radius;
+    }
 
-        int x = 50;
-        int y = 50;
+    public void drawBall() {
+        StdDraw.setPenColor(getColor());
+        StdDraw.filledSquare(getX(), getY(), radius);
+    }
 
-        
+    public void move(int width, int height) {
+        int radius = diameter / 2;
+
+        if (Math.abs(xLoc + xStep) + radius > width) {
+            xStep = -xStep;
+
+        }
+
+        xLoc += xStep;
+
     }
 
 }
