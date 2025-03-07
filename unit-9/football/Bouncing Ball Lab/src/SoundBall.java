@@ -23,5 +23,6 @@ public class SoundBall extends Ball {
     public void move(int width, int height) {
         super.move(width, height);
         changeDiameter();
+        StdAudio.play("car.wav");
     }
 }
