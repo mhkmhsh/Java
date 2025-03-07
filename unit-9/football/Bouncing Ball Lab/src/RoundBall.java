@@ -2,7 +2,9 @@
 import java.awt.*;
 
 public class RoundBall extends Ball {
-
+    int xLoc = x;
+    int diameter = d;
+    int xStep = xMove;
     private int radius;
 
     public RoundBall(int x, int y, Color c, int radius) {
