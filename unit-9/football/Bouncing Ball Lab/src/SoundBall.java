@@ -1,13 +1,12 @@
 
 import java.awt.*;
 
+
 public class SoundBall extends Ball {
 
     private int xLoc, yLoc, diameter;
     private int xStep, yStep;
-    public SoundBall
-
-    {
+    public SoundBall {
         xLoc = x;
         yLoc = y;
         xStep = xMove;
@@ -15,6 +14,7 @@ public class SoundBall extends Ball {
 
     }
 
+    super.move();
     public void move(int width, int height) {
 
         int radius = diameter / 2;
