@@ -6,13 +6,7 @@ public class SoundBall extends Ball {
 
     private int xLoc, yLoc, diameter;
     private int xStep, yStep;
-    public SoundBall {
-        xLoc = x;
-        yLoc = y;
-        xStep = xMove;
-        yStep = yMove;
-
-    }
+ 
 
     super.move();
     public void move(int width, int height) {

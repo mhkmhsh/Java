@@ -96,6 +96,7 @@ public class Ball
             StdDraw.filledCircle(xLoc, yLoc, diameter/2);  
     }
      
+     
    // Getters and Setters for all the instance variables
     public int getX()
     {
