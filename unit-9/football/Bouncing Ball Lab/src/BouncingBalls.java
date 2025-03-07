@@ -15,7 +15,7 @@ public class BouncingBalls {
         balls[1] = new ColorfulBall(10,10,20,-5,8);
         balls[2] = new SizeChangingBall(200,200,Color.CYAN, 50);
         balls[3] = new Thirdball(20,20,Color.GREEN, 2);
-        balls[4] = new SoundBall(50,30,Color.RED,40);
+        balls[4] = new SoundBall(50,30,Color.RED,10);
     }
 
 
