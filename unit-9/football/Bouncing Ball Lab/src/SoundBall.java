@@ -1,26 +1,27 @@
 
 import java.awt.*;
 
-
 public class SoundBall extends Ball {
-
-    private int xLoc, yLoc, diameter;
-    private int xStep, yStep;
- 
-
-    super.move();
-    public void move(int width, int height) {
-
-        int radius = diameter / 2;
-        if (Math.abs(xLoc + xStep) + radius > width) {
-            xStep = -xStep;
-            StdAudio.play("car.wav");
-        }
-        if (Math.abs(yLoc + yStep) + radius > height) {
-            yStep = -yStep;
-            StdAudio.play("car.wav");
-        }
-
+    private int maxDiameter, minDiameter;
+    private int diameterStep;
+    public SoundBall(int xStart, int yStart, Color c, int maxD) {
+        super(xStart, yStart, c);
+        maxDiameter = maxD;
+        minDiameter = 2;
+        diameterStep = 1;
     }
 
+    public void changeDiameter() {
+        int diam = getDiam();
+        diam += diameterStep;
+        if (diam >= maxDiameter || diam <= minDiameter) {
+            diameterStep = +diameterStep;
+        }
+        setDiam(diam);
+    }
+
+    public void move(int width, int height) {
+        super.move(width, height);
+        changeDiameter();
+    }
 }
