@@ -2,10 +2,17 @@
 import java.awt.*;
 
 public class RoundBall extends Ball {
-    int xLoc = x;
-    int diameter = d;
-    int xStep = xMove;
-    private int radius;
+
+    private double x0, y0, x1, y1;
+    private double ballRadius;
+
+    public LineWithBall(double x0, double y0, double x1, double y1, double ballRadius) {
+        this.x0 = x0;
+        this.y0 = y0;
+        this.x1 = x1;
+        this.y1 = y1;
+        this.ballRadius = ballRadius;
+    }
 
     public RoundBall(int x, int y, Color c, int radius) {
         super(x, y, c);
@@ -13,19 +20,16 @@ public class RoundBall extends Ball {
     }
 
     public void drawBall() {
+        StdDraw.line(new Line2D.Double(x0, y0, x1, y1));;
         StdDraw.setPenColor(getColor());
-        StdDraw.filledSquare(getX(), getY(), radius);
+        StdDraw.fillOval((int) (x0 - ballRadius), (int) (y0 - ballRadius), (int) (2 * ballRadius), (int) (2 * ballRadius));;
+
     }
 
+   
+
     public void move(int width, int height) {
-        int radius = diameter / 2;
-
-        if (Math.abs(xLoc + xStep) + radius > width) {
-            xStep = -xStep;
-
-        }
-
-        xLoc += xStep;
+        LineWithBall line = new LineWithBall(100, 50, 200, 150, 20);
 
     }
 

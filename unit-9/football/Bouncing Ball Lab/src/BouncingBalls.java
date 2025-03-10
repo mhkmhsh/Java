@@ -11,12 +11,12 @@ public class BouncingBalls {
         width = w;
         height = h;
         balls = new Ball[6];
-        balls[0] = new Ball(100,50,Color.BLUE);
-        balls[1] = new ColorfulBall(10,10,20,-5,8);
-        balls[2] = new SizeChangingBall(200,200,Color.CYAN, 50);
-        balls[3] = new Thirdball(20,20,Color.GREEN, 2);
-        balls[4] = new SoundBall(50,30,Color.RED,10);
-        balls[5] = new RoundBall(10, 10, Color.YELLOW,);
+        balls[0] = new SoundBall(50,30,Color.RED,10);
+        balls[1] = new Ball(100,50,Color.BLUE);
+        balls[2] = new ColorfulBall(10,10,20,-5,8);
+        balls[3] = new SizeChangingBall(200,200,Color.CYAN, 50);
+        balls[4] = new Thirdball(20,20,Color.GREEN, 2);
+        balls[5] = new RoundBall(10, 10, Color.YELLOW, 5);
     }
 
 
