@@ -3,7 +3,8 @@ import java.awt.*;
 
 public class RoundBall extends Ball {
 
-   
+    private int xLoc;
+    private int xStep;
    private int radius;
 
     public RoundBall(int x, int y, Color c, int radius) {
@@ -21,7 +22,7 @@ public class RoundBall extends Ball {
   
         if (Math.abs(xLoc + xStep) + radius > width) {
             xStep = -xStep;
-            StdAudio.play("pong.wav");
+           
         }
         
         xLoc += xStep; 
