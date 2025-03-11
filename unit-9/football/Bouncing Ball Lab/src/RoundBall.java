@@ -15,8 +15,8 @@ public class RoundBall extends Ball {
 
     public void move(int width, int height) {
         angle += 0.05;
-        if (angle > 2 * Math.PI) {
-            angle -= 2 * Math.PI;
+        if (angle > 20 * Math.PI) {
+            angle -= 20 * Math.PI;
         }
 
         setxLoc((int) (centerX + radius * Math.cos(angle)));
