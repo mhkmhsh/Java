@@ -34,6 +34,8 @@ public class Monster {
     }
 
     public Player() {
-
+Monster one = new Monster("red", 1000, 250);
+Monster two = new Monster("blue", 800, 150);
+Monster three = new Monster("yellow",1000,200);
     }
 }
