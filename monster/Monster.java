@@ -26,7 +26,7 @@ public class Monster {
     }
 
     public String toString() {
-        return;
+        return "monster " + name + " is at " + health " health, and " + attackPower + " attack power!";
     }
 
     public static int getTotalMonsters() {
