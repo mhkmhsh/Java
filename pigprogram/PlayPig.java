@@ -8,10 +8,7 @@ public class PlayPig {
     public static void welcome(){
         System.out.println("Welcome to the game, roll to start");
     }
-    public int dice(int roll){
-        
-    }
-
+   
 
 
 
