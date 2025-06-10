@@ -10,7 +10,16 @@ public class PlayPig {
     public static void welcome(){
         System.out.println("Welcome to the game, roll to start");
     }
-   
+   public int firstRoll(){ 
+    boolean p1Turn = true; 
+    if ( p1Turn = true){
+        int roll = (int)(Math.random() * 6) + 1;
+         p1Turn = false;
+    }
+    else {
+         
+    }
+   }
 
 
 
