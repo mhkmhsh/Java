@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Player extends PlayPig {
+public class Player  {
     private String name;
     private int totalScore;
     public String getName(){

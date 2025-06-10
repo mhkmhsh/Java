@@ -17,7 +17,8 @@ public class PlayPig {
          p1Turn = false;
     }
     else {
-         
+        int roll = (int)(Math.random() * 6) + 1;
+        p1Turn = true;
     }
    }
 
