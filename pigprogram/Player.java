@@ -1,10 +1,13 @@
-
 import java.util.Scanner;
 
 public class Player {
-
     private String name;
     private int totalScore;
+
+    public Player(String name) {
+        this.name = name;
+        this.totalScore = 0;
+    }
 
     public String getName() {
         return name;
@@ -14,42 +17,37 @@ public class Player {
         return totalScore;
     }
 
-    public Player(String name) {
-        this.name = name;
-        this.totalScore = 0;
+    public boolean takeTurn() {
+        Scanner scanner = new Scanner(System.in);
+        int turnTotal = 0;
+        boolean continueTurn = true;
+
+        while (continueTurn) {
+            int roll = rollDice();
+            System.out.println(name + " rolled: " + roll);
+
+            if (roll == 1) {
+                System.out.println("Bust! Better luck next turn.");
+                turnTotal = 0;
+                break; // End turn
+            } else {
+                turnTotal += roll;
+                System.out.println("Current turn total: " + turnTotal);
+                System.out.print("Do you want to roll again? (y/n): ");
+                String choice = scanner.nextLine();
+
+                if (!choice.equalsIgnoreCase("y")) {
+                    break; // End turn and keep points
+                }
+            }
+        }
+
+        totalScore += turnTotal;
+        System.out.println(name + "'s total score: " + totalScore);
+        return true; // Turn is over, next player should go
     }
 
-    
-    public void takeTurn() {
-        Scanner one = new Scanner(System.in);
-        System.out.println("Type any letter to roll the dice: ");
-        one.nextLine();
-        /* gen a random number, 
-         tell user current round total
-         prompt roll again or no
-        get out if roll 1 or say no */
-        int currRoundTot = 0;
-     
-        while (true) {
-            int roll = (int) (Math.random() * 6) + 1;
-        
-            if (roll == 1 ) {
-                currRoundTot = 0;
-                System.out.println("Bust! you rolled a 1.");
-                break;
-            }
-
-            System.out.println("You rolled a " + roll);
-            currRoundTot = roll + currRoundTot;
-            System.out.println("Do you want to roll again? ( y/n ): ");
-            String ans = one.nextLine();
-            if (ans.equals("n")){
-                break;
-            }
-
-        }
-        totalScore += currRoundTot;
-        System.out.print("Your turn is over! your score is a: " + totalScore);
-
+    private int rollDice() {
+        return (int) (Math.random() * 6) + 1;
     }
 }

@@ -1,56 +1,56 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class PlayPig {
+    static Player player1;
+    static Player player2;
+
     public static void main(String[] args) {
-     welcome();
-     play();
-     displayScoreBoard();
+        welcome();
+        playGame();
+        displayScoreBoard();
     }
-    public static void welcome(){
-        System.out.println("Welcome to the game, roll to start");
-    }
-    public static play(){
-Scanner inp = new Scanner(System.in);
-        String p1 = inp.nextLine();
-        System.out.println("Player 1 is: " + p1);
-        String p2 = inp.nextLine();
-        System.out.println("Player 2 is: " + p2);
 
+    public static void welcome() {
+        System.out.println(" Welcome to the Pig Dice Game!");
     }
-    public static displayScoreBoard(){
-        System.out.println(" Player One's total score is: " + totalScore );
-        System.out.println(" Player Two's total score is: " + totalScore );
-        if (p1>p2){
-            System.out.println("Player One is the Winner!")
+
+    public static void playGame() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter name for Player 1: ");
+        player1 = new Player(scanner.nextLine());
+
+        System.out.print("Enter name for Player 2: ");
+        player2 = new Player(scanner.nextLine());
+
+        boolean gameOn = true;
+        int winningScore = 100;
+        Player currentPlayer = player1;
+        Player nextPlayer = player2;
+
+        while (player1.getScore() < winningScore && player2.getScore() < winningScore) {
+            System.out.println("It’s  " + currentPlayer.getName() + "'s turn:");
+            currentPlayer.takeTurn();
+
+            // Switch turns
+            Player temp = currentPlayer;
+            currentPlayer = nextPlayer;
+            nextPlayer = temp;
         }
-        else{
-            System.out.println("Player Two is the Winner!")
+    }
+
+    public static void displayScoreBoard() {
+        System.out.println(" Final Scores:");
+        System.out.println(player1.getName() + ": " + player1.getScore());
+        System.out.println(player2.getName() + ": " + player2.getScore());
+
+        if (player1.getScore() > player2.getScore()) {
+            System.out.println("Player" + player1.getName() + " wins!");
+        } else if (player2.getScore() > player1.getScore()) {
+            System.out.println("Player " + player2.getName() + " wins!");
+        } else {
+            System.out.println("It's a tie!");
         }
     }
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
